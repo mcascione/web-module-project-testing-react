@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-
-import Loading from "./Loading";
 import Show from "./Show";
 
 import fetchShow from '../api/fetchShow';
@@ -11,6 +9,7 @@ const Display = (props) => {
   const { displayFunc } = props;
 
   const handleClick = () => {
+    console.log(fetchShow);
     fetchShow().then(data => {
       setShow(data);
 
